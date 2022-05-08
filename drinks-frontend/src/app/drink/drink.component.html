@@ -1,0 +1,21 @@
+<div class="drink-wrapper">
+  <h2 id={{drink.name}} class="drink-title">{{drink.name}}</h2>
+  <hr class="drink-divider">
+  <div class="grid">
+    <img src="assets/{{drink.name | lowercase}}.jpg" class="cocktail-image">
+    <div class="left">
+      <h3 class="drink-sub-title">Zutaten:</h3>
+      <ul class="drink-list">
+        <li *ngFor="let ingredient of drink.ingredients">{{ingredient}}</li>
+      </ul>
+      <h3 class="drink-sub-title">Rezept:</h3>
+      <ul class="drink-list">
+        <li *ngFor="let step of drink.recipe">{{step}}</li>
+      </ul>
+      <h3 class="drink-sub-title">Toppings:</h3>
+      <ul class="drink-list">
+        <li *ngFor="let topping of drink.toppings">{{topping}}</li>
+      </ul>
+    </div>
+  </div>
+</div>

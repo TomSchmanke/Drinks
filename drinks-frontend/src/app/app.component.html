@@ -1,0 +1,46 @@
+<div class="container">
+
+  <app-title-banner content="The Unforgettables"></app-title-banner>
+  
+  <div *ngFor="let drink of drinks">
+    <app-drink  
+      *ngIf="drink.category === allCategories.UNFORGETTABLE"
+      [drink] = drink>
+    </app-drink>
+  </div>
+  
+  
+  <app-title-banner content="Contemporary Classics"></app-title-banner>
+  
+  <div *ngFor="let drink of drinks">
+    <app-drink  
+      *ngIf="drink.category === allCategories.CLASSIC"
+      [drink] = drink>
+    </app-drink>
+  </div>
+  
+  
+  <app-title-banner content="New Era Drinks"></app-title-banner>
+
+  <div *ngFor="let drink of drinks">
+    <app-drink  
+      *ngIf="drink.category === allCategories.NEWERA"
+      [drink] = drink>
+    </app-drink>
+  </div>
+
+
+  <app-title-banner content="Non-IBA Specials"></app-title-banner>
+
+  <div *ngFor="let drink of drinks">
+    <app-drink  
+      *ngIf="drink.category === allCategories.NONIBA"
+      [drink] = drink>
+    </app-drink>
+  </div>
+
+
+
+
+
+</div>

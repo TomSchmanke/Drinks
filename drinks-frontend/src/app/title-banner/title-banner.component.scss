@@ -1,0 +1,21 @@
+.banner-box {
+  width: 100%;
+  background-color: #f0ffe7;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.banner-title {
+  padding: 60px 0;
+  font-size: 64px;
+}
+
+@media screen and (max-width: 600px) {
+  .banner-box {
+    margin-bottom: 20px;
+  }
+  
+  .banner-title {
+    font-size: 45px;
+  }
+}
