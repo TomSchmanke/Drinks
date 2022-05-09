@@ -1,0 +1,23 @@
+<div class="front-container">
+  <div class="front-title-container">
+    <h1 class="front-title">Wilkommen auf der Getränkekarte von Tom</h1>
+    <p class="front-description">Sieh dich ruhig ein wenig um. Im Normalfall kannst du alle der unten aufgeführten Gertränke bekommen.</p>
+  </div>
+
+  <h2 class="front-favourites">Toms Lieblinge</h2>
+  <div class="favourites-grid">
+    <div class="favourites-element" *ngFor="let favourite of favourites">
+      <p class="favourites-titel">
+        {{favourite.name}}
+      </p>
+      <img src="assets/{{favourite.name | lowercase}}.jpg" alt="mojito" class="favourites-image">
+    </div>   
+  </div>
+</div>
+
+<nav class="front-navigation">
+  <a href="#The_Unforgettables" class="navigation-button">The Unforgettables</a>
+  <a href="#Contemporary_Classics" class="navigation-button">Contemporary Classics</a>
+  <a href="#New_Era_Drinks" class="navigation-button">New Era Drinks</a>
+  <a href="#Non-IBA_Specials" class="navigation-button">Non-IBA Specials</a>
+</nav>

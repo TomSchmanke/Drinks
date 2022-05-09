@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DrinkComponent } from './drink/drink.component';
 import { Categories } from './models/categories';
 import { DrinkModel } from './models/drink-model';
 
@@ -19,7 +18,7 @@ export class AppComponent {
       ingredients : ["4,5cl Weißer Kubanischer Rum", "2cl Limettensaft", "6 Minzblätter", "2 Barlöffel Rohrzucker", "4cl Sprudelwasser"],
       recipe : ["Minze, Zucker und Limettensaft vermischen", "Etwas Sodawasser hinzufügen und Glaß mit Eis auffüllen", "Rum hingeben und mit Wasser auffüllen", "Leicht umrühren"],
       toppings : ["Minzstängel", "Limttenscheiben"],
-      favourite : false
+      favourite : true
     },
     {
       category : Categories.CLASSIC,
@@ -27,7 +26,7 @@ export class AppComponent {
       ingredients : ["4cl Zitronenwodka", "1,5ml Cointreau", "1,5cl Limettensaft", "3cl Cranberrysaft"],
       recipe : ["Alle Zutaten auf Eis shaken"],
       toppings : ["Zitronenzeste"],
-      favourite : false
+      favourite : true
     },
     {
       category : Categories.CLASSIC,
@@ -38,5 +37,7 @@ export class AppComponent {
       favourite : false
     }
   ].sort((a,b) => a.name.localeCompare(b.name));
+
+  favourites = this.drinks.filter((a) => a.favourite).slice(0, 4);
 
 }

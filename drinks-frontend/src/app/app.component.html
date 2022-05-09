@@ -1,6 +1,8 @@
 <div class="container">
 
-  <app-title-banner content="The Unforgettables"></app-title-banner>
+  <app-frontpage [favourites]="favourites"></app-frontpage>
+
+  <app-title-banner content="The Unforgettables" id="The_Unforgettables"></app-title-banner>
   
   <div *ngFor="let drink of drinks">
     <app-drink  
@@ -10,7 +12,7 @@
   </div>
   
   
-  <app-title-banner content="Contemporary Classics"></app-title-banner>
+  <app-title-banner content="Contemporary Classics" id="Contemporary_Classics"></app-title-banner>
   
   <div *ngFor="let drink of drinks">
     <app-drink  
@@ -20,7 +22,7 @@
   </div>
   
   
-  <app-title-banner content="New Era Drinks"></app-title-banner>
+  <app-title-banner content="New Era Drinks" id="New_Era_Drinks"></app-title-banner>
 
   <div *ngFor="let drink of drinks">
     <app-drink  
@@ -30,7 +32,7 @@
   </div>
 
 
-  <app-title-banner content="Non-IBA Specials"></app-title-banner>
+  <app-title-banner content="Non-IBA Specials" id="Non-IBA_Specials"></app-title-banner>
 
   <div *ngFor="let drink of drinks">
     <app-drink  
