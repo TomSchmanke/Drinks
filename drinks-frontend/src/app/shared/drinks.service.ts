@@ -42,7 +42,23 @@ export class DrinksService {
         recipe : ["Alle Zutaten auf Eis shaken", "In einem vorgekühlen Glaß servieren"],
         toppings : ["N/A"],
         favourite : false
-      }
+      },
+      {
+        category : Categories.UNFORGETTABLE,
+        name : "Clover Club",
+        ingredients : ["4.5cl Gin", "1,5cl Himbeersirup", "1,5cl Zitronensaft", "Ein paar Tropfen Eiweiß"],
+        recipe : ["Alle Zutaten auf Eis shaken", "In einem vorgekühlen Glaß servieren"],
+        toppings : ["Himbeeren"],
+        favourite : false
+      },
+      {
+        category : Categories.NONIBA,
+        name : "Kölsch",
+        ingredients : ["0.33l Kölsch"],
+        recipe : ["N/A"],
+        toppings : ["N/A"],
+        favourite : true
+      }        
     ].sort((a,b) => a.name.localeCompare(b.name));
    }
 

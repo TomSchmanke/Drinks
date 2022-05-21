@@ -1,18 +1,6 @@
-<div class="front-container">
-  <div class="front-title-container">
-    <h1 class="front-title">Wilkommen auf der Getränkekarte von Tom</h1>
-    <p class="front-description">Sieh dich ruhig ein wenig um. Im Normalfall kannst du alle der unten aufgeführten Gertränke bekommen.</p>
-  </div>
-
-  <h2 class="front-favourites">Toms Lieblinge</h2>
-  <div class="favourites-grid">
-    <div class="favourites-element" *ngFor="let favourite of favourites">
-      <p class="favourites-titel">
-        {{favourite.name}}
-      </p>
-      <img src="assets/{{favourite.name | lowercase}}.jpg" alt="mojito" class="favourites-image">
-    </div>   
-  </div>
+<div class="front-title-container">
+  <h1 class="front-title">Wilkommen auf der Getränkekarte von Tom</h1>
+  <p class="front-description">Sieh dich ruhig ein wenig um. Im Normalfall kannst du alle der unten aufgeführten Gertränke bekommen.</p>
 </div>
 
 <nav class="front-navigation">
@@ -21,3 +9,19 @@
   <a href="#New_Era_Drinks" class="navigation-button">New Era Drinks</a>
   <a href="#Non-IBA_Specials" class="navigation-button">Non-IBA Specials</a>
 </nav>
+
+<div class="front-favourites">
+  <h2 class="favourites-title">Toms Lieblinge</h2>
+  <div class="favourites-slider">
+    <div class="favourites-slides">
+      <div *ngFor="let favourite of favourites">
+        <img class="favourites-image" src="assets/{{favourite.name | lowercase}}.jpg" alt="">
+        <p class="favourites-name">
+          {{ favourite.name }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
