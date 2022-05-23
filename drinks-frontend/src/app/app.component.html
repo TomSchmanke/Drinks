@@ -2,7 +2,10 @@
 
   <app-frontpage [favourites]="favourites"></app-frontpage>
 
-  <app-title-banner content="The Unforgettables" id="The_Unforgettables"></app-title-banner>
+  <app-title-banner 
+    title="The Unforgettables" 
+    description="All diese unvergesslichen klassischen Rezepte, die die Bibel der Ursprünge der gemischten Getränke darstellen."
+    id="The_Unforgettables"></app-title-banner>
   
   <div *ngFor="let drink of drinks">
     <app-drink  
@@ -12,7 +15,10 @@
   </div>
   
   
-  <app-title-banner content="Contemporary Classics" id="Contemporary_Classics"></app-title-banner>
+  <app-title-banner 
+    title="Contemporary Classics" 
+    description="Die zeitgenössischen Klassiker, die in der ganzen Welt als Symbol für Klasse und Prestige beliebt bleiben."
+    id="Contemporary_Classics"></app-title-banner>
   
   <div *ngFor="let drink of drinks">
     <app-drink  
@@ -22,7 +28,10 @@
   </div>
   
   
-  <app-title-banner content="New Era Drinks" id="New_Era_Drinks"></app-title-banner>
+  <app-title-banner 
+    title="New Era Drinks"
+    description="Die meisten neuen Rezepte, die regelmäßig überarbeitet und auf die Entwicklung des Konsums und der aktuellen Mode abgestimmt werden."
+    id="New_Era_Drinks"></app-title-banner>
 
   <div *ngFor="let drink of drinks">
     <app-drink  
@@ -32,7 +41,10 @@
   </div>
 
 
-  <app-title-banner content="Non-IBA Specials" id="Non-IBA_Specials"></app-title-banner>
+  <app-title-banner 
+    title="Non-IBA Specials"
+    description="All diese Getränke die es nicht in die Listen des IBA, aber in mein Herz geschafft haben."
+    id="Non-IBA_Specials"></app-title-banner>
 
   <div *ngFor="let drink of drinks">
     <app-drink  

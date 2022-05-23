@@ -7,7 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TitleBannerComponent implements OnInit {
 
-  @Input() content : string = '';
+  @Input() title : string = '';
+  @Input() description : string = '';
   
   constructor() { }
 
