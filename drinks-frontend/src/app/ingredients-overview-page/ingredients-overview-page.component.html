@@ -1,0 +1,35 @@
+<app-title-banner title="Available Ingredients"></app-title-banner>
+
+<div class="button-container">
+  <button class="positive-button" (click)="onAddButton()">Add Entry</button>
+  <button class="update-button" (click)="onUpdateButton()">Update Entry</button>
+  <button class="negative-button" (click)="onDeleteButton()">Delete Entry</button>  
+</div>
+
+<table>
+  <ng-container *ngFor="let ingredientList of availableIngredientsReduced">
+    <tr>
+      <th>{{ingredientList[0].name}}</th>
+      <th>
+        <button class="table-button update-button"
+          *ngIf="isUpdateMode"
+          (click)="onUpdate(ingredientList)">
+          Update
+        </button>
+        <button class="table-button negative-button"
+        *ngIf="isDeleteMode"
+        (click)="onDelete(ingredientList)">
+        Delete
+      </button>
+      </th>
+    </tr>
+    <tr *ngFor="let ingredient of ingredientList; last as l">
+      <td [ngClass]="l ? 'td-last' : ''"><span>{{ingredient.sub_name}}</span></td>
+      <td [ngClass]="l ? 'td-last' : ''">{{ingredient.ammount}}{{ingredient.unit_of_measurement}}</td>
+    </tr>
+    <tr *ngIf="ingredientList.length > 1">
+      <td class="total"><span>Insgesamt</span></td>
+      <td class="total">{{getTotalAmmount(ingredientList)}}{{ingredientList[0].unit_of_measurement}}</td>
+    </tr>
+  </ng-container>
+</table>

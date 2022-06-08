@@ -1,0 +1,76 @@
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0 30px 0;
+
+  button {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+}
+
+.positive-button {
+  background-color: #ace9b0;
+}
+
+.update-button {
+  background-color: #ace2e9;
+}
+
+.negative-button {
+  background-color: #e9c2ac;
+}
+
+table {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  width: 90%;
+  left: 5%;
+  position: relative;
+}
+
+th {
+  text-align: left;
+  font-size: 20px;
+  padding-top: 10px;
+  border-top: 1px solid black;
+}
+
+td {
+  span {
+    padding-left: 10px;
+  }
+}
+
+.total {
+  padding-top: 10px;
+  border-top: 1px dashed black;
+  padding-bottom: 10px;
+}
+
+.td-last {
+  padding-bottom: 10px;
+}
+
+.table-button {
+  border: 1px solid black;
+  padding: 0px 4px;
+  border-radius: 2rem;
+}
+
+@media (min-width: 600px) {
+  .button-container {
+    width: 80%;
+    margin: 20px auto 30px auto;
+    button {
+      padding: 20px 40px;
+      font-size: 15px;
+    }
+  }
+  
+  table {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
