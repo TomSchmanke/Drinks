@@ -1,0 +1,37 @@
+.footer-container {
+  background-color: #ededed;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.footer-link {
+  color: #000000;
+  font-size: 15px;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.footer-link-1 {
+  margin-top: 16px;
+}
+
+.footer-link-2 {
+  margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 600px) {
+  .row {
+    flex-direction: row;
+  }
+
+  .footer-link, .footer-link-1, .footer-link-2 {
+    margin: 16px 20px;
+  }
+}
+

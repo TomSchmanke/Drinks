@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { DrinkModel } from '../models/drink-model';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-frontpage',
@@ -8,10 +8,24 @@ import { DrinkModel } from '../models/drink-model';
 })
 export class FrontpageComponent implements OnInit {
 
-  @Input() favourites!: DrinkModel[]; 
-  constructor() { }
+  initalBarCode!: string;
+
+  constructor(
+    private activatedRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.initalBarCode = params['barId'];
+    })
+  }
+
+  public submitLoginForm(event: string) {
+    console.log('Submit Form with value: ' + event);
+  }
+
+  public createNewBar() {
+    console.log('Create new Bar');
   }
 
 }

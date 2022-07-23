@@ -1,0 +1,37 @@
+.login-dialog-container {
+  width: 250px;
+  padding: 25px 10px;
+  background-color: #323232E6;
+  border-radius: 15px;
+}
+
+.login-dialog-headline {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+@media only screen and (min-width: 600px) {
+  .login-dialog-container {
+    width: 400px;
+    padding: 50px 20px;
+  }
+
+  .login-dialog-headline {
+    padding: 0 50px;
+  }
+
+  .button-group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

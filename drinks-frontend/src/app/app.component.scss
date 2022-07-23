@@ -1,11 +1,7 @@
-.container {
-  width: 80%;
-  margin: 0 auto;
+.content-wrapper {
+  flex: 1 0 auto;
 }
 
-@media only screen and (max-width: 600px) {
-  .container {
-    width: 100%;
-  }
+app-footer {
+  flex-shrink: 0;
 }
-

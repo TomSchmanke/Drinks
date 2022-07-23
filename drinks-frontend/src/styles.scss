@@ -1,10 +1,22 @@
+@import "./app/core/buttons.scss";
+@import "./app/core/inputs.scss";
+
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,500,600');
 
 *, *::before, *::after {
   margin: 0;
 }
 
+html, body, app-root {
+  height: 100%;
+}
+
 body {
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
 }

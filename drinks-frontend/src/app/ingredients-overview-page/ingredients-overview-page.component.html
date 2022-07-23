@@ -11,7 +11,7 @@
     <tr>
       <th>{{ingredientList[0].name}}</th>
       <th>
-        <button class="table-button update-button"
+        <!-- <button class="table-button update-button"
           *ngIf="isUpdateMode"
           (click)="onUpdate(ingredientList)">
           Update
@@ -20,12 +20,16 @@
         *ngIf="isDeleteMode"
         (click)="onDelete(ingredientList)">
         Delete
-      </button>
+      </button> -->
       </th>
     </tr>
     <tr *ngFor="let ingredient of ingredientList; last as l">
       <td [ngClass]="l ? 'td-last' : ''"><span>{{ingredient.sub_name}}</span></td>
       <td [ngClass]="l ? 'td-last' : ''">{{ingredient.ammount}}{{ingredient.unit_of_measurement}}</td>
+      <td> 
+        <button> <img class="button-image" src="assets/edit_icon.svg" alt=""> </button>
+        <button> <img class="button-image" src="assets/add_icon.svg" alt=""> </button>
+        <button> <img class="button-image" src="assets/delete_icon.svg" alt=""> </button> </td>
     </tr>
     <tr *ngIf="ingredientList.length > 1">
       <td class="total"><span>Insgesamt</span></td>

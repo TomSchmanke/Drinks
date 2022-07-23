@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Ingredient } from '../models/ingredient';
 import { IngredientsService } from '../shared/ingredients.service';
 
@@ -14,8 +15,11 @@ export class IngredientsOverviewPageComponent implements OnInit {
   isUpdateMode = false;
   isDeleteMode = true;
 
-  constructor(ingredientsService: IngredientsService) {
-    this.availableIngredientsReduced = ingredientsService.getAllAvailableIngredientsReduced();
+  constructor(
+    private ingredientsService: IngredientsService,
+    private router: Router,
+    private route: ActivatedRoute) {
+      this.availableIngredientsReduced = ingredientsService.getAllAvailableIngredientsReduced();
   }
 
   ngOnInit(): void {
@@ -42,6 +46,7 @@ export class IngredientsOverviewPageComponent implements OnInit {
 
 
   onUpdate(ingredientList: Ingredient[]) {
+    this.router.navigate([`../ingredients-modify/${ingredientList[0].name}`], { relativeTo: this.route })
     console.log(ingredientList);
   }
 

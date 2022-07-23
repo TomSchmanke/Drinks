@@ -1,0 +1,22 @@
+<div class="login-dialog-container">
+  <h1 class="login-dialog-headline">Willkommen beim <br/> Bar-Manager</h1>
+
+  <form class="form-group" [formGroup]="loginForm" (ngSubmit)="submitLoginForm()">
+    <input 
+      type="input" 
+      class="form-field"
+      [ngClass]="{'form-field-success' : loginForm.valid && loginForm.touched, 'form-field-failure' : loginForm.invalid && loginForm.touched}" 
+      placeholder="" 
+      name="barCode" 
+      id='barCode'
+      formControlName="barCode"/>
+    <label for="barCode" class="text-input-label">Bar Code</label>
+    <label for="barCode" class="text-input-error">Hier steht eine Error-Meldung</label>
+
+    <div class="button-group">
+      <button class="button button-success" type="submit" [disabled]="loginForm.invalid">Bar betreten</button>
+      <button class="button button-info" type="button" (click)="createNewBar()">Bar eröffnen</button>
+    </div>
+  </form>
+
+</div>
