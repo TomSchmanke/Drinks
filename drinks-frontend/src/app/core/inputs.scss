@@ -31,9 +31,10 @@
 
   &.form-field-failure {
     border-bottom: 2px solid #DC3545;
+    margin-bottom: 0;
 
     ~ .text-input-error {
-      display: inline;
+      display: block;
     }
   }
 }
@@ -51,6 +52,7 @@
   display: none;
   color: #DC3545;
   font-size: 15px;
+  margin-bottom: 15px;
 }
 
 .form-field:focus {

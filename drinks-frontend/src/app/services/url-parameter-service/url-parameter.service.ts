@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class UrlParameterServiceService {
+export class UrlParameterService {
 
   constructor(
     private activatedRoute: ActivatedRoute

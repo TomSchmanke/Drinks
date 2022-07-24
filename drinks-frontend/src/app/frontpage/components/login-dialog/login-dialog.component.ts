@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { BarCodeService } from 'src/app/services/bar-code-service/bar-code.service';
 
 @Component({
   selector: 'app-login-dialog',
@@ -14,15 +15,26 @@ export class LoginDialogComponent implements OnInit {
   loginForm!: FormGroup;
   
 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+    private fb: FormBuilder,
+    private barCodeService: BarCodeService
+  ) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
       barCode: [this.initalBarCode, [
         Validators.required,
-        Validators.pattern('^[A-Za-z]{10}$')
+        Validators.pattern('^[A-Za-z]{10}$'),
+        this.isBarCodeAvailable()
       ]]
     });
+  }
+
+  public isBarCodeAvailable(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      console.log(this.barCodeService.isBarCodeAvailable(control.value))
+      return this.barCodeService.isBarCodeAvailable(control.value) ? { availabilityError: true} : null;
+    }
   }
 
   public submitLoginForm() {

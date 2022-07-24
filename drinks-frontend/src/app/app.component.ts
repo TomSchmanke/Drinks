@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { UrlParameterServiceService } from './services/url-parameter-service.service';
+import { UrlParameterService } from './services/url-parameter-service/url-parameter.service';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +13,9 @@ export class AppComponent {
 
   constructor(
     public router: Router,
-    private urlParameterService: UrlParameterServiceService
+    private urlParameterService: UrlParameterService
   ) { 
     this.barCode = this.urlParameterService.barCodeParameter;
-    console.log(this.barCode)
   }
 
 }

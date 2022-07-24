@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { UrlParameterServiceService } from './url-parameter-service.service';
+import { UrlParameterService } from './url-parameter.service';
 
 describe('UrlParameterServiceService', () => {
-  let service: UrlParameterServiceService;
+  let service: UrlParameterService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(UrlParameterServiceService);
+    service = TestBed.inject(UrlParameterService);
   });
 
   it('should be created', () => {
