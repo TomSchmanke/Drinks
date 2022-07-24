@@ -1,66 +1,8 @@
 <div class="content-wrapper">
+  <app-header 
+    *ngIf="router.isActive('/ingredients-overview', false)">
+  </app-header>
   <router-outlet></router-outlet>
 </div>
 
 <app-footer></app-footer>
-
-<!-- <div class="container">
-
-  <app-frontpage [favourites]="favourites"></app-frontpage>
-
-  <app-title-banner 
-    title="The Unforgettables" 
-    description="All diese unvergesslichen klassischen Rezepte, die die Bibel der Ursprünge der gemischten Getränke darstellen."
-    id="The_Unforgettables"></app-title-banner>
-  
-  <div *ngFor="let drink of drinks">
-    <app-drink  
-      *ngIf="drink.category === allCategories.UNFORGETTABLE"
-      [drink] = drink>
-    </app-drink>
-  </div>
-  
-  
-  <app-title-banner 
-    title="Contemporary Classics" 
-    description="Die zeitgenössischen Klassiker, die in der ganzen Welt als Symbol für Klasse und Prestige beliebt bleiben."
-    id="Contemporary_Classics"></app-title-banner>
-  
-  <div *ngFor="let drink of drinks">
-    <app-drink  
-      *ngIf="drink.category === allCategories.CLASSIC"
-      [drink] = drink>
-    </app-drink>
-  </div>
-  
-  
-  <app-title-banner 
-    title="New Era Drinks"
-    description="Die meisten neuen Rezepte, die regelmäßig überarbeitet und auf die Entwicklung des Konsums und der aktuellen Mode abgestimmt werden."
-    id="New_Era_Drinks"></app-title-banner>
-
-  <div *ngFor="let drink of drinks">
-    <app-drink  
-      *ngIf="drink.category === allCategories.NEWERA"
-      [drink] = drink>
-    </app-drink>
-  </div>
-
-
-  <app-title-banner 
-    title="Non-IBA Specials"
-    description="All diese Getränke die es nicht in die Listen des IBA, aber in mein Herz geschafft haben."
-    id="Non-IBA_Specials"></app-title-banner>
-
-  <div *ngFor="let drink of drinks">
-    <app-drink  
-      *ngIf="drink.category === allCategories.NONIBA"
-      [drink] = drink>
-    </app-drink>
-  </div>
-
-
-
-
-
-</div> -->

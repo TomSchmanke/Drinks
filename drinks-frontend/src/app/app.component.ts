@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Categories } from './models/categories';
-import { DrinkModel } from './models/drink-model';
-import { DrinksService } from './shared/drinks.service';
+import { Router } from '@angular/router';
+import { UrlParameterServiceService } from './services/url-parameter-service.service';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +8,15 @@ import { DrinksService } from './shared/drinks.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
-  drinks : DrinkModel[];
-  favourites: DrinkModel[];
 
-  allCategories = Categories;
+  barCode!: string;
 
-  constructor(drinkService: DrinksService) {
-    this.drinks = drinkService.getAllDrinks();
-    this.favourites = drinkService.getFavoriteDrinks();
+  constructor(
+    public router: Router,
+    private urlParameterService: UrlParameterServiceService
+  ) { 
+    this.barCode = this.urlParameterService.barCodeParameter;
+    console.log(this.barCode)
   }
 
 }

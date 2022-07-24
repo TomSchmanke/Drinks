@@ -1,0 +1,33 @@
+<header class="header-container">
+  <ng-container *ngIf="getScreenWidth < 900">
+    <div class="header-main">
+      <h1 class="header-title">Bar-Manager</h1>
+      <div class="menu-toggle" (click)="openMenu()" [ngClass]="{'open': menuOpen}">
+        <div class="hamburger"></div>
+      </div>
+    </div>
+    <nav class="navigation-container" [ngClass]="{'open': menuOpen}">
+      <hr class="horizontal-devider">
+      <a class="navigation-link" [routerLink]="drinksLink" routerLinkActive="active">Getränke</a>
+      <a class="navigation-link" [routerLink]="ingredientsLink" routerLinkActive="active">Zutaten</a>
+      <a class="navigation-link" [routerLink]="ordersLink" routerLinkActive="active">Bestellungen</a>
+      <hr class="horizontal-devider">
+      <div class="barcode-container">
+        <h2 class="barcode-title">Bar-Code:</h2>
+        <span class="barcode">{{ barCode }}</span>
+      </div>
+    </nav>
+  </ng-container>
+  <ng-container *ngIf="getScreenWidth >= 900">
+    <nav class="navigation-container">
+      <h1 class="header-title">Bar-Manager</h1>
+      <a class="navigation-link" [routerLink]="drinksLink" routerLinkActive="active">Getränke</a>
+      <a class="navigation-link" [routerLink]="ingredientsLink" routerLinkActive="active">Zutaten</a>
+      <a class="navigation-link" [routerLink]="ordersLink" routerLinkActive="active">Bestellungen</a>
+      <div class="barcode-container">
+        <h2 class="barcode-title">Bar-Code:</h2>
+        <span class="barcode">{{ barCode }}</span>
+      </div>
+    </nav>
+  </ng-container>
+</header>

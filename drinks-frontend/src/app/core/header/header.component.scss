@@ -1,0 +1,134 @@
+.header-container {
+  background-color: #ededed;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 25px;
+}
+
+.header-title {
+  color: #000000;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  padding-top: 22px;
+  padding-right: 15px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #ffffff;
+  height: 6px;
+  width: 40px;
+  border-radius: 10px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-12px);
+}
+
+.hamburger::after {
+  transform: translateY(6px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  transform: translateY(-6px) rotate(-90deg);
+}
+
+.navigation-container {
+  display: none;
+  transition: all ease-in-out 500ms;
+}
+
+.open.navigation-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.horizontal-devider {
+  height: 1px;
+  background-color: #000000;
+  border: none;
+  margin: 5px 0;
+}
+
+.navigation-link {
+  margin: 5px 30px;
+  color: #000000;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.navigation-link.active {
+  text-decoration: underline;
+  text-decoration-color: #0DCAF0;
+  text-decoration-thickness: 2px;
+}
+
+.barcode-container {
+  text-align: center;
+  margin: 5px 0 10px 0;
+}
+
+.barcode-title {
+  margin: 0;
+  padding: 0;
+  color: #000000;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.barcode {
+  color: #000000;
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 900px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .horizontal-devider {
+    display: none;
+  }
+
+  .navigation-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-title {
+    order: 2;
+  }
+
+  .navigation-link {
+    margin: 0;
+  }
+
+  .navigation-link:last-of-type, .barcode-container {
+    order: 3;
+  }
+}

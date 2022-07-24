@@ -12,6 +12,7 @@ import { OldFrontpageComponent } from './old-frontpage/old-frontpage.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { LoginDialogComponent } from './frontpage/components/login-dialog/login-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './core/header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     IngredientsModifyComponent,
     OldFrontpageComponent,
     FooterComponent,
-    LoginDialogComponent
+    LoginDialogComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

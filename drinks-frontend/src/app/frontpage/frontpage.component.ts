@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { UrlParameterServiceService } from '../services/url-parameter-service.service';
 
 @Component({
   selector: 'app-frontpage',
@@ -11,13 +11,11 @@ export class FrontpageComponent implements OnInit {
   initalBarCode!: string;
 
   constructor(
-    private activatedRoute: ActivatedRoute
+    private urlParameterService: UrlParameterServiceService
   ) { }
 
   ngOnInit(): void {
-    this.activatedRoute.queryParams.subscribe(params => {
-      this.initalBarCode = params['barId'];
-    })
+    this.initalBarCode = this.urlParameterService.barCodeParameter;
   }
 
   public submitLoginForm(event: string) {
