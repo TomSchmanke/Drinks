@@ -32,7 +32,6 @@ export class LoginDialogComponent implements OnInit {
 
   public isBarCodeAvailable(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
-      console.log(this.barCodeService.isBarCodeAvailable(control.value))
       return this.barCodeService.isBarCodeAvailable(control.value) ? { availabilityError: true} : null;
     }
   }

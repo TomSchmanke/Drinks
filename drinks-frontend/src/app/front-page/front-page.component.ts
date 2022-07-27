@@ -5,8 +5,8 @@ import { UrlParameterService } from '../services/url-parameter-service/url-param
 
 @Component({
   selector: 'app-frontpage',
-  templateUrl: './frontpage.component.html',
-  styleUrls: ['./frontpage.component.scss']
+  templateUrl: './front-page.component.html',
+  styleUrls: ['./front-page.component.scss']
 })
 export class FrontpageComponent implements OnInit {
 
