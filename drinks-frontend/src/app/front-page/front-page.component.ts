@@ -8,7 +8,7 @@ import { UrlParameterService } from '../services/url-parameter-service/url-param
   templateUrl: './front-page.component.html',
   styleUrls: ['./front-page.component.scss']
 })
-export class FrontpageComponent implements OnInit {
+export class FrontPageComponent implements OnInit {
 
   initalBarCode!: string;
 

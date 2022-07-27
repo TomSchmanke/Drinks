@@ -1,0 +1,20 @@
+<div class="invite-friends-container">
+  <h2 class="invite-friends-title">Lade deine Freunde in deine Bar ein</h2>
+  <qrcode 
+    *ngIf="getScreenWidth > 600; else qrCodeSmall" 
+    class="invite-friends-qr-code" 
+    [qrdata]="barCodeUrl" 
+    [width]="200" 
+    [errorCorrectionLevel]="'M'" 
+    [margin]="1">
+  </qrcode>
+  <ng-template #qrCodeSmall>
+    <qrcode 
+      class="invite-friends-qr-code" 
+      [qrdata]="barCodeUrl" 
+      [width]="128" 
+      [errorCorrectionLevel]="'M'" 
+      [margin]="1">
+    </qrcode>
+  </ng-template>
+</div>
